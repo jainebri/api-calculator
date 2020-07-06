@@ -27,11 +27,15 @@ Para compilar el API se debe ejecutar el siguiente comando en el directorio raí
 
 mvn clean install
 
+![Compilar API](https://github.com/jainebri/api-calculator/blob/develop/images/01-Compliar.png)
+
 4. Ejecutar el API
 
 Para ejecutar el API se debe ejecutar el siguiente comando en el directorio raíz del proyecto:
 
 java -jar target\calculator-0.0.1-SNAPSHOT.jar
+
+![Compilar API](https://github.com/jainebri/api-calculator/blob/develop/images/02-Ejecutar.png)
 
 5. Visualización de Documentación:
 
@@ -42,6 +46,9 @@ http://localhost:8080/api-calculator/swagger-ui.html
 6. Consumo de la Operación
 
 La operación para calcular operaciones aritméticas esta diseñada como un POST cuyo parámetro de entrada es el objeto ArithmeticOperation.java. Este tiene un grupo, que representa una categoría de operaciones, por el momento Aritméticas, pero en el futuro podrían existir más operaciones soportadas en el API como las Trigonométricas.
+
+![Compilar API](https://github.com/jainebri/api-calculator/blob/develop/images/03-Postman.png)
+
 Para soportar la fácil extensión del API en cuanto sus operaciones, se implementó un patrón Factoría Desacoplada, la cual permite desacoplar los diversos servicios de cálculo como se puede observar en el siguiente diagrama.
 
 Extender cálculos trigonométricos requerirá solo la creación de un servicio que herede de la clase IOperationsService.
