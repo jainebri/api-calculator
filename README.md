@@ -51,6 +51,8 @@ La operación para calcular operaciones aritméticas esta diseñada como un POST
 
 Para soportar la fácil extensión del API en cuanto sus operaciones, se implementó un patrón Factoría Desacoplada, la cual permite desacoplar los diversos servicios de cálculo como se puede observar en el siguiente diagrama.
 
+![Decoupled Factory](https://github.com/jainebri/api-calculator/blob/develop/images/05-Decoupled-Factory.png)
+
 Extender cálculos trigonométricos requerirá solo la creación de un servicio que herede de la clase IOperationsService.
 
 7. Gestión Global de Errores y Excepciones
