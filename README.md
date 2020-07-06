@@ -50,7 +50,7 @@ Extender cálculos trigonométricos requerirá solo la creación de un servicio 
 
 A partir de la experiencia con la Apificación en Spring Boot, es importante un modelo estándar de gestión de errores y excepciones en el API. Por lo tanto, se ha incluido un sistema global de gestión de errores y excepciones basado en la característica Controller Advice de Spring.
 
-Imagen XXX
+![Gestión Global de Errores y Excepciones](images/04-Gestion-Global-Errores-Excepciones-Global Exceptions.png)
 
 Esto tiene la ventaja de homogenizar las excepciones que los programadores deben lanzar en el API.
 La gestión esta centralizada por Spring y los errores retornados los clientes del API poseen la misma estructura siempre.
