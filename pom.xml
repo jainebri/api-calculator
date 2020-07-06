@@ -8,9 +8,10 @@
 		<version>2.3.1.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+	
 	<groupId>es.sanitas.test4</groupId>
 	<artifactId>calculator</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>calculator</name>
 	<description>Calculator Project as part of Technical Test</description>
 
@@ -52,6 +53,11 @@
 		    <artifactId>commons-lang3</artifactId>
 		</dependency>
 		
+		<dependency>
+		    <groupId>io.corp</groupId>
+		    <artifactId>calculator</artifactId>
+		    <version>1.0.0</version>
+		</dependency>
 		
 		<dependency>
 		    <groupId>io.springfox</groupId>

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import es.sanitas.test4.calculator.api.v1.dto.ArithmeticOperation;
 import es.sanitas.test4.calculator.api.v1.dto.errors.ErrorResponse;
 import es.sanitas.test4.calculator.service.ICalculatorService;
+import io.corp.calculator.TracerAPI;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
@@ -33,6 +34,10 @@ public class CalculatorController extends AbstractBaseRestController{
 	@Autowired
 	private ICalculatorService calculatorService;
 	
+	@Autowired
+	private TracerAPI tracerAPI;
+	
+	
 	/**
 	 * 
 	 * @param datosSolicitud
@@ -48,7 +53,10 @@ public class CalculatorController extends AbstractBaseRestController{
 	public ResponseEntity<Double> calculate(
 				@ApiParam(value = "Operation to calculate") @Valid @RequestBody ArithmeticOperation operation) {
 		
-		return ResponseEntity.ok(calculatorService.calculate(operation)  );
+		Double result = calculatorService.calculate(operation);
+		tracerAPI.trace(result);
+		
+		return ResponseEntity.ok( result );
 	}
 
 }
